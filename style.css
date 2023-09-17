@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Big Shoulders Display', cursive; */
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 10px;
+    width: 55em;
+    height: 30em;
+    overflow: hidden;
+}
+
+.grids{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sedans{
+    grid-column: 1;
+    background-color: var(--Bright-orange);
+}
+.suvs{
+    grid-column: 2;
+    background-color: var(--Dark-cyan);
+}
+.luxury{
+    grid-column: 3;
+    background-color: var(--Very-dark-cyan);
+}
+
+img{
+    width: 64px;
+    height: 40px;
+}
+
+.title{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+    color: var(--Very-light-gray-background-headings-buttons);
+    text-transform: uppercase;
+}
+
+.description{
+    color: var(--Transparent-white-paragraphs);
+}
+
+button{
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    width: 75%;
+    height: 13%;
+    border-radius: 25px;
+    border-style: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: transparent;
+    color: var(--Very-light-gray-background-headings-buttons);
+    border: 2px solid var(--Very-light-gray-background-headings-buttons);
+    
+
+}
+.button1{
+    color: var(--Bright-orange);
+}
+.button2{
+    color: var(--Dark-cyan);
+}
+.button3{
+    color: var(--Very-dark-cyan);
+}
+
+/* ====================media query========================= */
+
+@media (max-width:425px) {
+    body{
+        padding: 50px 0;
+    }
+    .wrapper{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 100em;
+    }
+}
